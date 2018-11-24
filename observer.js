@@ -34,8 +34,17 @@ document.getElementById("unsub").addEventListener("click", function() {
 document.getElementById("fire").addEventListener("click", function() {
   click.fire();
 });
+document.getElementById("sub-s").addEventListener("click", function() {
+  click.subscribe(getCurrentSeconds);
+});
+document.getElementById("unsub-s").addEventListener("click", function() {
+  click.unsubscribe(getCurrentSeconds);
+});
 
 // FUNCTIONS
 function getCurrentMilliSeconds() {
   console.log(`Current Milli seconds: ${new Date().getMilliseconds()}`);
+}
+function getCurrentSeconds() {
+  console.log(`Current seconds: ${new Date().getSeconds()}`);
 }
